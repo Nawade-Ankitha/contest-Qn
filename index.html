@@ -1,0 +1,94 @@
+<!-- Project Overview
+Task 1 - Grids UI
+
+Make the following UI using grids (25 marks) Figma Link- https://www.figma.com/file/vScNHqv6jMzQP8em7OxbJl/Untitled?node-id=1%3A2&t=yXD7OWJsRUAGdto9-1
+Use images of your choice instead of the grey cards, but the layout should be the same.
+Use Z-index to make the ""Read more.."" ui at the end of the grid. (10 marks)
+Task 2 - Inputs Test
+
+Make the following ui with the following input tags - (Keep the ui exactly the same) (15 marks) Figma Link- https://www.figma.com/file/TdVWMQwMPSxNKBmsCqUami/Untitled?node-id=0%3A1&t=RIphIaci4vj4Hst2-1
+The first field should be a normal text input. (5 marks)
+The next should be a select input - with as many dropdown items as u want. (5 marks)
+The third should be a text area - make it only vertically resizable. (5 marks)
+The 4th input field should look like as shown - it is the one at the bottom left, its a text input but the label is in a flex and the button is also inside the same boundary. (5 marks)
+The 5th would be a search bar with a search icon, it should be on the right. (5 marks)
+Then an increment and decrement input. (5 marks)
+Make a simple checkbox and a radio button. (10 marks)
+Bonus - Make the switch and style it (10 marks)
+
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        padding: 5px;
+        margin: 6px 0px;
+       }
+    
+    </style>
+</head>
+<body>
+    <form action="post">
+        <div>
+        <label for="name" class="required">Text Field </label><br>
+        <input type="text" name="name" placeholder="Input Text" required>
+        <style>
+            .required::after{
+                content: " *";
+                color: red;
+            }
+        </style>
+        </div>
+        <div>
+            <label for="name">Select Field</label><br>
+            <select name="select field" id="select field" placeholder="select" aria-setsize="10">
+                <option value="" disabled selected hidden>select</option>
+                <option value="select 1">one</option>
+                <option value="select ">two</option>
+                <option value="select">three</option>
+            </select>
+            </div>
+            <div>
+                <label for="">Text Area</label><br>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Text Area"></textarea>
+            </div>
+            <div>
+                <label for="name" class="required">Text Field with Add-ons</label><br>
+                <input type="text" name="name" placeholder="input text" required>
+                <style>
+                    .required::after{
+                        content: " *";
+                        color: red;
+                    }
+                </style>
+                <button>Button</button>
+            </div>
+            <div>
+                <input type="text" placeholder="search" img src="">
+            </div>
+            <div>
+                <input type="number" name="number"
+                min = "0" max="100" step="1" value="1"><br>
+            <div>
+                <input type="checkbox" name="hi" value="hi" checked>
+                <label for="">Checkbox</label>
+            </div>
+                <input type="radio" name="" value="" checked >
+                <label for="">Radio Button</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="switch" class="checkbox">
+                <label for="switch" class="toggle">Switch</label><br>
+            </div>
+            
+
+    </form>
+</body>
+</html>
